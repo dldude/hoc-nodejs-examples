@@ -1,0 +1,21 @@
+{
+  "name": "hoc-nodejs-examples",
+  "version": "0.0.1",
+  "description": "Hour of Code examples",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "div": "node divide.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dldude/hoc-nodejs-examples.git"
+  },
+  "author": "Devin Duden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dldude/hoc-nodejs-examples/issues"
+  },
+  "homepage": "https://github.com/dldude/hoc-nodejs-examples#readme"
+}
