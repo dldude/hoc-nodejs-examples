@@ -1,15 +1,18 @@
 const msg_enter_problem = "Please enter a valid division problem. i.e. - 10/2";
 
-var Divide = function(rl) {
+var MathExample = function(rl) {
 
-    Divide.prototype.start = function() {
+    MathExample.prototype.divide = function() {
         console.log(msg_enter_problem);
         rl.on('line', (input) => {
-            console.log(`Division problem: ${input}`);
-            
-            if (input.toLower() == "done") {
+            //Check if divide example is to be done
+            if (input.toLowerCase() == "done") {
+                console.log("Good bye!");
                 rl.close();
+                return;
             }
+
+            console.log(`Division problem: ${input}`);
             //Separate problem into numerator and denominator
             var problem = input.split("/");
             
@@ -20,11 +23,11 @@ var Divide = function(rl) {
             }
         
             //Perform math by calling function and passing numerator and denominator
-            divide(problem[0], problem[1])
+            _divide(problem[0], problem[1])
         });
     };
 
-    function divide(numerator, denominator) {
+    function _divide(numerator, denominator) {
         //Set variables with default value
         var num = 0;
         var den = 0;
@@ -79,4 +82,4 @@ var Divide = function(rl) {
     };
 };
 
-module.exports = Divide;
+module.exports = MathExample;
